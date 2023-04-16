@@ -1,6 +1,8 @@
 # hemanup
 I want to upscale 80s cartoons.
 
+In one day's testing, I determined that Topaz Video AI (pirated) is a good way to denoise videos.
+
 Looking at the [upscale wiki](https://upscale.wiki/wiki/Model_Database) it seems that ESRGAN is the way to go. 
 Looking at the github repo, they direct us toward [Real-SRGAN](https://github.com/xinntao/Real-ESRGAN). I'll investigate that next.
 
@@ -21,6 +23,9 @@ In particular I'd like to try the [ToonVHS](https://upscale.wiki/wiki/Model_Data
 I'll try to make `Real-ESRGAN/inference_realesrgan_video.py` run with the old model.
 
 The ESRGAN can be represented by [this code](https://github.com/xinntao/ESRGAN/blob/master/RRDBNet_arch.py). There's also a [much more complex version](https://github.com/chaiNNer-org/chaiNNer/blob/main/backend/src/nodes/impl/pytorch/architecture/RRDB.py), but I like the first one better. Can I just use that?
+
+## Pirating topaz labs
+I downloaded it from [ianon.app](https://ianon.app). Now it's running, gave me a preview. Looked good. I'm using the "Artemis Denoise/Sharpen" with "Strong Halo" setting, and a "Progressive" video type. It's faster than `Real-ESRGAN` -- generating the clean version at about 22.5fps.
 # references
 ## papers
 * [ESRGAN: Enhanced Super-Resolution Generative Adversarial Networks](https://arxiv.org/abs/1809.00219)
